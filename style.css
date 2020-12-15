@@ -1,0 +1,29 @@
+html {
+ background-image: url('assets/Body BG.png');
+ font-family: Georgia, "Times New Roman", Times, serif;
+ width: 640px;
+}
+
+.bubble {
+  display: block;
+  margin: 0.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(127,127,127,0.5);
+  width: max-content;
+  background: rgb(251, 245, 184);
+}
+
+.time {
+  color: grey;
+}
+
+.author {
+  color: grey;
+}
+
+.message {
+  color: black;
+}

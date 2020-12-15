@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fetch</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Chat!</title>
 </head>
 <body>
   <script type="text/javascript" src="index.js"></script>
 
-  <h2>Message Box</h2>
 
   <div id="Message Screen">
+  <!--  <h2 class="container"></h2>  -->
   </div>
-  <input id="Input_Box" type="text" name="inputBox" required minlength="1" maxlength="500" size="10"></input>
-  <input type="submit" value="Send Message" onclick = "sendMessage()"></input>
-  <button id="Refresh Feed" onclick = "updateMessage()">Refresh Feed</input>
-</body>
-</html>
+
+  <div id="Input Area">
+    <input id="Input_Box" type="text" name="inputBox" required minlength="1" maxlength="500" size="10"></input>
+    <input type="submit" value="Send Message" onclick = "sendMessage()"></input>
+    <button id="Refresh Feed" onclick = "updateMessage()">Refresh Feed</input>
+    </div>
+  </body>
+  </html>

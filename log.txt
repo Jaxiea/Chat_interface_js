@@ -1,0 +1,13 @@
+First step is to build up the skeletons of sending and receiving messages.
+
+The asychronous problem needs to be solved otherwise messages won't show up at the right time.
+
+(But maybe a refresh button should also be in place.)
+
+
+
+
+
+Displaying the messages:
+
+1. Parse timestamp.

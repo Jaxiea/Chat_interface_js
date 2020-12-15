@@ -12,4 +12,11 @@ The asychronous problem needs to be solved otherwise messages won't show up at t
 Displaying the messages:
 
 1. Parse timestamp. (check)
-2. formatting author, message, time.
+2. Show HTML encoding properly. (Why does "o'm" turn into "o&amp;lsquo;m"?)
+
+
+Fleshing out features:
+
+1. message entry box and submit button (or enter)
+  1. get rid of errors with "'" ...
+2. async/await?

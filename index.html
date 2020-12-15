@@ -16,6 +16,7 @@
   const POSTurl = 'https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0';
 
   async function getMessages(){
+
     const response = await fetch(AllMessagesURL);
     const data = await response.json();
     console.log(data);
@@ -24,14 +25,46 @@
       var node = document.createElement("p");
       var author = document.createTextNode(data[i].author);
       var message = document.createTextNode(data[i].message);
-      var timestamp = document.createTextNode(data[i].timestamp);         // Create a text node
+
+      var formattedTime = convertTimestamp(data[i].timestamp);
+
+      var time = document.createTextNode(formattedTime);         // Create a text node
+
+
       node.appendChild(author);
       node.appendChild(message);
-      node.appendChild(timestamp);
+      node.appendChild(time);
       document.getElementById('Message Screen').appendChild(node);
     }
   }
 
+
+  function convertTimestamp(stamp){
+
+    var fullDate = new Date(stamp * 1000);
+    console.log(fullDate);
+
+    var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+    var day = days[fullDate.getDay()];
+    console.log(day);
+
+    var month = fullDate.getMonth();
+
+    var date = fullDate.getDate();
+
+    var hours = fullDate.getHours();
+
+    var minutes = "0" + fullDate.getMinutes();
+
+//    var seconds = "0" + date.getSeconds();
+
+    // Will display time in weekday month/day \n 10:30 format
+    var formattedTime = hours + ':' + minutes.substr(-2) + " " + day + " " + month + "/" + date;
+
+    return formattedTime;
+
+  }
 
 
 
@@ -56,7 +89,7 @@
     .then(res => console.log(res));
   }
 
-//  sendMessage();
+  //  sendMessage();
   getMessages();
 
   //asychronous! What to do?

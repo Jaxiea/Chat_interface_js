@@ -11,4 +11,5 @@ The asychronous problem needs to be solved otherwise messages won't show up at t
 
 Displaying the messages:
 
-1. Parse timestamp.
+1. Parse timestamp. (check)
+2. formatting author, message, time.

@@ -17,6 +17,18 @@ Displaying the messages:
 
 Fleshing out features:
 
-1. message entry box and submit button (or enter)
-  1. get rid of errors with "'" ...
-2. async/await?
+1. message entry box and submit button (or enter) (check)
+  1. get rid of errors with "'" ...  (check)
+2. Simple prompt for user name before proceeding to chat. (Check)
+3. Implement updateMessage() correctly. 
+
+
+Styling:
+Style everything.
+
+
+
+Goals unreached:
+
+How to implement async/await correctly to refresh message screen after message submit? (circumvented due to time constraints, refresh button added.)
+Only refresh parts of chat history, not all.

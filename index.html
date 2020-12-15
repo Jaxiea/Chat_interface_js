@@ -7,12 +7,13 @@
 </head>
 <body>
   <script type="text/javascript" src="index.js"></script>
+
   <h2>Message Box</h2>
+
   <div id="Message Screen">
   </div>
-  <input id="Input Box" type="text" name="inputBox" required
-       minlength="1" maxlength="500" size="10"></input>
-
-  <input type="submit" value="Send Message" onclick = "send_n_refresh()"></input>
+  <input id="Input_Box" type="text" name="inputBox" required minlength="1" maxlength="500" size="10"></input>
+  <input type="submit" value="Send Message" onclick = "sendMessage()"></input>
+  <button id="Refresh Feed" onclick = "updateMessage()">Refresh Feed</input>
 </body>
 </html>

@@ -1,19 +1,44 @@
 const AllMessagesURL = 'https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=4hbLloOBHnKP';
 const POSTurl = 'https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0';
 var messages;
+var known_data_stream = [];
+var usr = "";
+
+function getUserName(){
+
+  var userName = window.prompt('Welcome to this cozy chatroom. \nWhat should everyone call you?', "");
+
+  /* check input length */
+  if (userName.length > 0 && userName.length < 20){
+    usr = userName;
+    getMessages();
+  }
+  else{
+    alert("Your name shouldn't be empty or more than 20 characters.");
+    getUserName();
+  }
+
+  /* clicking cancel on input prompt isn't handled. */
+}
 
 async function getMessages(){
 
   const response = await fetch(AllMessagesURL);
   const data = await response.json();
-  //  console.log(data);
+  known_data_stream = data;
 
-  for (let i = 0; i < data.length; i++){
+  visualizeMessages(known_data_stream);
+}
+
+function visualizeMessages(data_stream){
+
+  for (let i = 0; i < data_stream.length; i++){
     var node = document.createElement("li");
-    var author = document.createTextNode(data[i].author);
+    var author = document.createTextNode(data_stream[i].author);
 
-    var formattedTime = convertTimestamp(data[i].timestamp);
-    var formattedMessage = checkHTMLencode(data[i].message);
+    //format for visualization
+    var formattedTime = convertTimestamp(data_stream[i].timestamp);
+    var formattedMessage = checkHTMLencode(data_stream[i].message);
 
     var time = document.createTextNode(formattedTime);         // Create a text node
     var message = document.createTextNode(formattedMessage);
@@ -24,39 +49,28 @@ async function getMessages(){
   }
 }
 
-/* incomplete list of encoding exchange */
-/* Either needs a better way, or completing. */
+getUserName();
 
-function checkHTMLencode(txt){
-  var str = String(txt);
 
-  if (str.search("&#x27;")){
-    str = str.replaceAll("&#x27;", "'");
-  }
+async function updateMessage(){
 
-  if (str.search("lsquo;")){
-    str = str.replaceAll("lsquo;", "'");
-  }
+  const response = await fetch(AllMessagesURL);
+  const data = await response.json();
 
-  if (str.search("&lt;")){
-    str = str.replaceAll("&lt;", "<");
-  }
+  var current_data_stream = data;
 
-  if (str.search("&gt;")){
-    str = str.replaceAll("&gt;", ">");
-  }
-  if (str.search("&amp;")){
-    str = str.replaceAll("&amp;", "&");
-  }
-  if (str.search("&quot;")){
-    str = str.replaceAll("&quot;", "\"");
-  }
-  if (str.search("&lt;")){
-    str = str.replaceAll("&lt;", "<");
-  }
+//  console.log(known_data_stream);
+//  console.log(data);
 
-  return str;
+/* gotta slice the array correctly. */
+  var new_data = current_data_stream.slice(known_data_stream.length, current_data_stream.length);
+//  console.log("newdata", new_data);
+
+  visualizeMessages(new_data);
+  known_data_stream = current_data_stream;
 }
+
+
 
 function convertTimestamp(stamp){
 
@@ -83,11 +97,42 @@ function convertTimestamp(stamp){
 
 }
 
+/* incomplete list of encoding exchange */
+/* Either needs a better way, or completing. */
+
+function checkHTMLencode(txt){
+  var str = String(txt);
+
+  if (str.search("&#x27;")){
+    str = str.replaceAll("&#x27;", "'");
+  }
+
+  if (str.search("&amp;lsquo;")){
+    str = str.replaceAll("&amp;lsquo;", "'");
+  }
+
+  if (str.search("&lt;")){
+    str = str.replaceAll("&lt;", "<");
+  }
+
+  if (str.search("&gt;")){
+    str = str.replaceAll("&gt;", ">");
+  }
+
+  if (str.search("&quot;")){
+    str = str.replaceAll("&quot;", "\"");
+  }
+  if (str.search("&lt;")){
+    str = str.replaceAll("&lt;", "<");
+  }
+
+  return str;
+}
 
 
 function sendMessage(){
   const timestamp = Date.now();
-  var txt = document.getElementById('Input Box').value;
+  var txt = document.getElementById('Input_Box').value;
   txt = txt.replace("'", "&lsquo;");
 
   if (txt.length < 1){
@@ -97,7 +142,7 @@ function sendMessage(){
 
   const messageObj = {
     message:txt,
-    author:"Pete"
+    author:usr,
   }
 
   const options = {
@@ -115,11 +160,12 @@ function sendMessage(){
 
 }
 
+
+/* Didn't figure this out in time */
+
+/*
 async function send_n_refresh(){
   await sendMessage();
+  updateMessage();
 }
-
-//  sendMessage();
-getMessages();
-
-//asychronous! What to do?
+*/

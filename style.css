@@ -4,26 +4,74 @@ html {
  width: 640px;
 }
 
+#Message_Screen{
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 .bubble {
   display: block;
-  margin: 0.5rem;
-  padding: 1.5rem 2rem;
-  border-radius: 25px;
+  margin-left: 3rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  padding: 1rem;
+  border-radius: 10px;
   border-style: solid;
   border-width: 1px;
   border-color: rgba(127,127,127,0.5);
   width: max-content;
-  background: rgb(251, 245, 184);
+  background: rgb(249, 250, 199);
 }
 
 .time {
   color: grey;
+  margin: 1%;
+  font-size: small;
 }
 
 .author {
   color: grey;
+  margin: 1%;
+  font-size: small;
 }
 
 .message {
   color: black;
+  margin: 1%;
+  font-size: normal;
+}
+
+.input_container{
+  width: 100%;
+  background-color: rgb(77, 173, 245);
+}
+
+#Input_Box{
+  width: 75%;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: normal;
+}
+
+#Submit_Button{
+  width: 20%;
+  background-color: rgb(255, 144, 144);
+  font-size: large;     /* percentage */
+  text-align: center;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

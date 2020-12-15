@@ -70,7 +70,7 @@ function visualizeMessages(data_stream){
     node.appendChild(time_container);
 
 
-    document.getElementById('Message Screen').appendChild(node);
+    document.getElementById('Message_Screen').appendChild(node);
   }
 }
 

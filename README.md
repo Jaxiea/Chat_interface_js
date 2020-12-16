@@ -20,7 +20,7 @@ Later Priorities:
 
 3. A more vigorous output check for HTMLencode, what I have now only covers the basics.
 
-4. A input check for username input (?)
+4. An input check for username input (?)
 
 5. Deal with visitors clicking the cancel button on the first username prompt.
 

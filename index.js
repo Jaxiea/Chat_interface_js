@@ -121,7 +121,7 @@ function visualizeMessages(data_stream){
 
   for (let i = 0; i < data_stream.length; i++){
     var node = document.createElement("div");
-    var att = document.createAttribute("class");       // Create a "class" attribute
+    var att = document.createAttribute("class");
     att.value = "bubble";
     node.setAttributeNode(att);
 
@@ -163,7 +163,7 @@ function visualizeMessages(data_stream){
     document.getElementById('Message_Screen').appendChild(node);
 
     if (tmp == tmp_usr){
-      att.value = "bubble_me";
+      att.value += " bubble_me";
       console.log(att.value);
       node.setAttributeNode(att);
       var clear_div = document.createElement("div");

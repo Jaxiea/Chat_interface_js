@@ -1,94 +1,86 @@
 html {
  background-image: url('assets/Body BG.png');
- font-family: Georgia, "Times New Roman", Times, serif;
- width: 640px;
+ font-family: Helvetica, "Times New Roman", Times, Georgia;
+ max-width: 640px;
+ min-width: 320px;
 }
 
 #Message_Screen{
-  padding-top: 16px;
-  padding-bottom: 16px;
   overflow: auto;
-  height: 700px;
-  position: relative;
+  width: 100%;
+  height: 736px;
 }
 
 .bubble {
   display: block;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  padding: 1rem;
-  border-radius: 10px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 16px;
+  max-width: 420px;
+
+  border-radius: 5px;
   border-style: solid;
   border-width: 1px;
   border-color: rgba(127,127,127,0.5);
   width: max-content;
-  background: rgb(249, 250, 199);
+  background: white;
+
 }
 
 .bubble_me {
-  display: block;
   float: right;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  padding: 1rem;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(127,127,127,0.5);
-  width: max-content;
   background: rgb(249, 250, 199);
 }
 
 .time {
-  color: grey;
-  margin: 1%;
+  color: rgb(169,169,169);
+  line-height: 150%;
   font-size: small;
 }
 
 .author {
-  color: grey;
-  margin: 1%;
+  color: rgb(169,169,169);
+  line-height: 150%;
   font-size: small;
 }
 
 
 .message {
   color: black;
-  margin: 1%;
-  font-size: normal;
+  line-height: 150%;
+  font-size: 16px;
 }
 
 .input_container{
   width: 100%;
+  height: 64px;
   background-color: rgb(77, 173, 245);
 }
 
 #Input_Box{
-  width: 75%;
-  padding: 12px 20px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 8px;
-  margin-right: 4px;
+  width: 74.5%;
+  padding: 13px 12px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 10px;
+  margin-right: 3px;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 0.5px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: normal;
+  font-size: 16px;
 }
 
 #Submit_Button{
   width: 20%;
   background-color: rgb(255, 144, 144);
-  font-size: large;     /* percentage */
+  font-size: 1.2em;     /* percentage */
   text-align: center;
   color: white;
-  padding: 12px 20px;
-  margin-top: 8px;
+  padding: 12px;
+  margin-top: 8.5px;
   margin-bottom: 8px;
   margin-left: 4px;
   margin-right: 8px;

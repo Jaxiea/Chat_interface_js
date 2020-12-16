@@ -1,5 +1,11 @@
 Doodle Chat Interface Challenge. December 2020. Jada Xie.
 
+Tools:
+
+I used vanilla JS/HTML/CSS for the challenge. I attempted to learn React.js for the challenge, but was overwhelmed after an afternoon of trying. I chose vanilla JS since it was familiar. (P5.js which I'm more familiar with wouldn't have presented a significant advantage in anyway. )
+
+Some of the functions used were first times for me, for instance interacting with an API, I thought it would be more clear to lay them out for my learning and readability instead of chaining them a lot. But I do hope I get better at chaining.
+
 
 PRIORITIES:
 
@@ -14,7 +20,7 @@ Top Priorities:
 
 Later Priorities:
 
-1. Styling the message input box, its border and the submit button so that everything is in unison, like the example images in /assets. And spending time to perfect all margins and padding in general. (The decision on which values are absolute which in percentage are a little bit arbitrary in places at this point.)
+1. Styling the message input box, its border and the submit button so that everything is in unison, like the example images in /assets. And spending time to perfect all margins and padding in general. (The decision on which values are absolute which in percentage are a little bit arbitrary in places at this point.) Also put more work on the colors. 
 
 2. Optimizing the code. See below "What I would do...", No.1. (Although, hopefully with experience I wouldn't have to take this detour.)
 
@@ -23,6 +29,7 @@ Later Priorities:
 4. An input check for username input (?)
 
 5. Deal with visitors clicking the cancel button on the first username prompt.
+
 
 
 

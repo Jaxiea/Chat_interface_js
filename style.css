@@ -3,6 +3,7 @@ html {
  font-family: Helvetica, "Times New Roman", Times, Georgia;
  max-width: 640px;
  min-width: 320px;
+ height: 100vh;
 }
 
 /*   ---- Message Display Area -----*/
@@ -81,7 +82,7 @@ html {
 
 #Submit_Button{
   width: 20%;
-  background-color: rgb(255, 144, 144);
+  background-color: rgb(255, 144, 100);
   font-size: 1.2em;     /* percentage */
   text-align: center;
   color: white;
@@ -93,4 +94,8 @@ html {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#Submit_Button:hover{
+  background-color: rgb(255, 144, 144);
 }

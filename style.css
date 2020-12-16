@@ -5,6 +5,7 @@ html {
  min-width: 320px;
 }
 
+/*   ---- Message Display Area -----*/
 #Message_Screen{
   overflow: auto;
   width: 100%;
@@ -36,22 +37,27 @@ html {
 
 .time {
   color: rgb(169,169,169);
-  line-height: 150%;
+  line-height: 160%;
   font-size: small;
 }
 
 .author {
   color: rgb(169,169,169);
-  line-height: 150%;
+  line-height: 160%;
   font-size: small;
 }
 
 
 .message {
   color: black;
-  line-height: 150%;
+  line-height: 160%;
   font-size: 16px;
 }
+
+
+
+
+/*   ---- Input Area  --------*/
 
 .input_container{
   width: 100%;

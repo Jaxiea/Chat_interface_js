@@ -1,4 +1,5 @@
-Doodle Chat Interface Challenge. December 2020.
+Doodle Chat Interface Challenge. December 2020. Jada Xie.
+
 
 PRIORITIES:
 

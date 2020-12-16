@@ -20,7 +20,7 @@ Top Priorities:
 
 Later Priorities:
 
-1. Styling the message input box, its border and the submit button so that everything is in unison, like the example images in /assets. And spending time to perfect all margins and padding in general. (The decision on which values are absolute which in percentage are a little bit arbitrary in places at this point.) Also put more work on the colors. 
+1. Styling the message input box, its border and the submit button so that everything is in unison, like the example images in /assets. And spending time to perfect all margins and padding in general. (The decision on which values are absolute which in percentage are a little bit arbitrary in places at this point.) Also put more work on the colors.
 
 2. Optimizing the code. See below "What I would do...", No.1. (Although, hopefully with experience I wouldn't have to take this detour.)
 
@@ -43,7 +43,7 @@ What I would do if I had more time:
 
 4. Implement an automatic message retriever based on perhaps time. (Every few senconds?) (Combined with step 1.)
 
-5. Learn how to implement this in react. I tried this at first but didn't manage due to complete lack of experience, but I see the benefits of using react here over vanilla JS.
+5. Learn how to implement this in react. 
 
 6. Implement more error checking and catching.
 

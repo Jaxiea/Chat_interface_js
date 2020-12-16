@@ -3,7 +3,7 @@ Doodle Chat Interface Challenge. December 2020. Jada Xie.
 
 PRIORITIES:
 
-Top - Priorities:
+Top Priorities:
 1. Implement core message features, sending, fetching, correctly.
 
 2. Displaying messages in readable form, parsing timestamp, getting rid of common html encoding issues.

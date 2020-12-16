@@ -14,7 +14,7 @@ Top - Priorities:
 
 Later Priorities:
 
-1. Styling the message input box, its border and the submit button so that everything is in unison, like the example images in /assets. And spending time to perfect all margins and padding in general. (The decision on which values are absolute which in percentage are somewhat arbitrary at this point.)
+1. Styling the message input box, its border and the submit button so that everything is in unison, like the example images in /assets. And spending time to perfect all margins and padding in general. (The decision on which values are absolute which in percentage are a little bit arbitrary in places at this point.)
 
 2. Optimizing the code. See What I would do..., No.1. (Although, hopefully with experience I wouldn't have to take this detour.)
 
